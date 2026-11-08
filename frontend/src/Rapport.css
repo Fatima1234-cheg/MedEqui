@@ -1,0 +1,368 @@
+/* ===== PALETTE GMAO — VERT ===== */
+:root {
+    --ink: #172b29;
+    --muted: #71817d;
+    --line: #e3eae6;
+    --paper: #ffffff;
+    --canvas: #f3f6f3;
+    --pine: #163a34;
+    --pine-light: #24574d;
+    --mint: #c8f0d8;
+    --mint-deep: #247451;
+    --coral: #d66f54;
+    --amber: #c18a34;
+    --shadow: 0 10px 35px rgba(25, 51, 43, .055);
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--canvas);
+    color: var(--ink);
+}
+
+.rapport {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--canvas);
+}
+
+/* ===== NAVBAR ===== */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--paper);
+    padding: 0 32px;
+    height: 64px;
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(23, 43, 41, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navBrand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.imgmedlogo {
+    height: 38px;
+    width: 38px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.navTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.3px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    padding: 0;
+}
+
+.navLink,
+.navLinkActiveRapport {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: inherit;
+}
+
+.navLink {
+    color: var(--muted);
+}
+
+.navLink:hover {
+    background-color: var(--canvas);
+    color: var(--pine);
+}
+
+.navLinkActiveRapport {
+    color: var(--pine);
+    background-color: var(--mint);
+}
+
+/* ===== CONTAINER ===== */
+.rapport-container {
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 32px 40px;
+    background: var(--paper);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(23, 43, 41, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--pine);
+}
+
+h2 {
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+h3 {
+    color: var(--ink);
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--pine);
+}
+
+/* ===== COMPANY INFO ===== */
+.company-info {
+    background-color: var(--canvas);
+    padding: 18px 22px;
+    font-family: Cambria, Cochin, Georgia, serif;
+    line-height: 1.8;
+    border-radius: 10px;
+    border-left: 4px solid var(--pine);
+    margin-bottom: 28px;
+    color: var(--ink);
+    font-size: 14px;
+}
+
+.company-info h2 {
+    color: var(--pine);
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.icon {
+    font-size: 14px;
+    color: var(--pine);
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.company-info a {
+    color: var(--pine);
+    text-decoration: none;
+}
+
+.company-info a:hover {
+    text-decoration: underline;
+    color: var(--pine-light);
+}
+
+/* ===== FORM ===== */
+.form-container {
+    width: 100%;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.section-block {
+    background-color: var(--canvas);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+}
+
+.section-block.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ===== FORM GROUP ===== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.section-block textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--ink);
+    background-color: var(--paper);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.section-block textarea:focus {
+    border-color: var(--mint-deep);
+    box-shadow: 0 0 0 3px rgba(36, 116, 81, 0.12);
+}
+
+.form-group textarea,
+.section-block textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-group-textarea {
+    margin-top: 4px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.btnSave,
+.btnPrint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s;
+    min-width: 160px;
+}
+
+.btnSave {
+    background-color: var(--pine);
+    color: #ffffff;
+}
+
+.btnSave:hover {
+    background-color: var(--pine-light);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(22, 58, 52, 0.18);
+}
+
+.btnPrint {
+    background-color: var(--canvas);
+    color: var(--ink);
+    border: 1px solid var(--line);
+}
+
+.btnPrint:hover {
+    background-color: #e8ede9;
+    color: var(--pine);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .rapport-container {
+        padding: 20px;
+        margin: 16px;
+    }
+
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+
+    .navBar {
+        padding: 0 16px;
+    }
+}
+
+/* ===== PRINT ===== */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body,
+    .rapport {
+        background-color: #ffffff;
+    }
+
+    .rapport-container {
+        box-shadow: none;
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .section-block {
+        background-color: #ffffff;
+        border: 1px solid #cbd5e1;
+        page-break-inside: avoid;
+    }
+
+    h1 {
+        color: #000;
+        border-bottom-color: #000;
+    }
+
+    h3 {
+        color: #000;
+        border-bottom-color: #333;
+    }
+
+    .company-info {
+        background-color: #ffffff;
+        border-left-color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .section-block textarea {
+        border: none;
+        border-bottom: 1px solid #94a3b8;
+        border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
